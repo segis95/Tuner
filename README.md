@@ -8,7 +8,9 @@ This project is based on the **Discrete Fourier Transform**(DFT) result analysis
 
 <img src="https://render.githubusercontent.com/render/math?math=\LARGE X[\omega] = \sum_{k=1}^N x_k e^{-i\omega k T_s},">
 
-where <img src="https://render.githubusercontent.com/render/math?math=\omega"> is angular frequency and <img src="https://render.githubusercontent.com/render/math?math=\omega = 2\pi f">, where f is ordinary frequency in Hz.
+where <img src="https://render.githubusercontent.com/render/math?math=\omega"> is angular frequency and <img src="https://render.githubusercontent.com/render/math?math=\omega = 2\pi f">, where <img src="https://render.githubusercontent.com/render/math?math=f"> is ordinary frequency in Hz. Now we can rewrite the above definition as follows:
+
+<img src="https://render.githubusercontent.com/render/math?math=\LARGE X[f] = \sum_{k=1}^N x_k e^{-i\2\pi \frac{k}{N}f},">
 
 
 
