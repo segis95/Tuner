@@ -4,5 +4,5 @@
 
 # Underlying theory
 
-This project is based on the **Discrete Fourier Transform**(DFT) output analysis. Let x_1
+This project is based on the **Discrete Fourier Transform**(DFT) output analysis. Let <img src="https://render.githubusercontent.com/render/math?math=x_1, \dots, x_n"> 
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
