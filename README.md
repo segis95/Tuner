@@ -12,7 +12,7 @@ where <img src="https://render.githubusercontent.com/render/math?math=\omega"> i
 
 <img src="https://render.githubusercontent.com/render/math?math=\LARGE X[\hat{\omega}] =\sum_{k=1}^N x_k e^{-i\hat{\omega}k}= \sum_{k=1}^N x_k e^{-i\2\pi \frac{k}{N}f},"> with <img src="https://render.githubusercontent.com/render/math?math=\hat{\omega}:=\omega T_s">.
 
-As k's are integer, <img src="https://render.githubusercontent.com/render/math?math=X[\hat{\omega}]"> is periodic with period <img src="https://render.githubusercontent.com/render/math?math=2\pi">. Moreover for real signal x  we have<img src="https://render.githubusercontent.com/render/math?math=X[2\pi - \hat{\omega}] = X[\hat{\omega}]^*">(conjugate). For this reason the amplitude spectrum function of X (i.e. <img src="https://render.githubusercontent.com/render/math?math=|X[\hat{\omega}]| = \sqrt{Re(X[\hat{\omega}])^2 + Im(X[\hat{\omega}])^2}">) is symmetric w.r.t. <img src="https://render.githubusercontent.com/render/math?math=\pi">.
+As k's are integer, <img src="https://render.githubusercontent.com/render/math?math=X[\hat{\omega}]"> is periodic with period <img src="https://render.githubusercontent.com/render/math?math=2\pi">. Moreover for real signal x  we have<img src="https://render.githubusercontent.com/render/math?math=X[2\pi - \hat{\omega}] = X[\hat{\omega}]^*">(conjugate). For this reason the amplitude spectrum function of X (i.e. <img src="https://render.githubusercontent.com/render/math?math=|X[\hat{\omega}]| = \sqrt{Re(X[\hat{\omega}])^2+Im(X[\hat{\omega}])^2}">) is symmetric w.r.t. <img src="https://render.githubusercontent.com/render/math?math=\pi">.
 
 
 
