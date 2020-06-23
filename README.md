@@ -1,8 +1,13 @@
 1/ Download "Tuner.jar" and folder "images" into one location;
 2/ Via cmd tape command "java -jar Tuner.jar"
 
+# Introduction
+
+The goal of the project is to build a Guitar tuner that allows to tune a guitar: i.e. recognize the closest note to the sounding one and say how much and how the string tension should be corrected. 
 
 # Underlying theory
+
+## Fourier Transform
 
 This project is based on the **Discrete Fourier Transform**(DFT) result analysis. Let <img src="https://render.githubusercontent.com/render/math?math=x_1, \dots, x_N"> be consequent microphone signal measurments separated by time intervals of <img src="https://render.githubusercontent.com/render/math?math=T_s = \frac{1}{N}">. The DFT is then given by: 
 
@@ -16,8 +21,14 @@ As k's are integer, <img src="https://render.githubusercontent.com/render/math?m
 
 Function [_DoubleFFT_1D.realForward()_](https://wendykierp.github.io/JTransforms/apidocs/org/jtransforms/fft/DoubleFFT_1D.html "JTransforms doc") is used in One.class.
 
+## Overtones
 
+In the real life a sounding string does not produce a single frequency. It turns out that a range of frequencies is produced. Those frequencies are usually represented by the main one and it's multiples([_Overtones_](https://en.wikipedia.org/wiki/Overtone#:~:text=An%20overtone%20is%20any%20frequency,overtones%20together%20are%20called%20partials. "Overtone")). To undertand why this happens it's useful to look at the
+[_solution to the Vibrating String differential equation_](https://tutorial.math.lamar.edu/classes/de/VibratingString.aspx "PDE Solution"). According to it, any string movement may be decomposed into an infinite sum of harmonics. Each harmonic describes a sinusoidal shape of oscillating string i.e. oscillation amplitude of each point of the string. That's why there are several frequencies in the signal: the main one(corresponding to the vibrating part of the string) and **overtones**. 
 
+# Recognition algorithm.
+
+- Perform 
 
 
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
