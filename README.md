@@ -28,7 +28,10 @@ In the real life a sounding string does not produce a single frequency. It turns
 
 # Recognition algorithm.
 
-- Perform 
+- Perform DFT and calculate **spectrogram**;
+- Calculate the **spectrogram average** <img src="https://render.githubusercontent.com/render/math?math=S_{avg}"> for frequencies from 20Hz to _max_freq__(48K Hz, 22K Hz, 8K Hz or 4K Hz - depends on the user's choice);
+- Calculate <img src="https://render.githubusercontent.com/render/math?math=BS_{avg}"> - the average of the above spectrogram points **where value is below** <img src="https://render.githubusercontent.com/render/math?math=S_{avg}">, so that <img src="https://render.githubusercontent.com/render/math?math=BS_{avg} < S_{avg}">; define threshold <img src="https://render.githubusercontent.com/render/math?math=T := 4 * BS_{avg}">
+
 
 
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
