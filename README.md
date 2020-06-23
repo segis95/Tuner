@@ -14,6 +14,10 @@ where <img src="https://render.githubusercontent.com/render/math?math=\omega"> i
 
 As k's are integer, <img src="https://render.githubusercontent.com/render/math?math=X[\hat{\omega}]"> is periodic with period <img src="https://render.githubusercontent.com/render/math?math=2\pi">. Moreover for real signal x  we have: <img src="https://render.githubusercontent.com/render/math?math=X[2\pi - \hat{\omega}] = X[\hat{\omega}]^*">(conjugate). For this reason X will be defined by it's values on <img src="https://render.githubusercontent.com/render/math?math=[0,\pi]">. But what if <img src="https://render.githubusercontent.com/render/math?math=\hat{\omega} > \pi"> ? Here we refer to the [_Nyquist–Shannon–Kotelnikov theorem_](https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem "Wikipedia"): __If a function x contains no frequencies higher than B hertz, it is completely determined by giving its ordinates at a series of points spaced <img src="https://render.githubusercontent.com/render/math?math=\frac{1}{2B}"> seconds apart__. So if we choose <img src="https://render.githubusercontent.com/render/math?math=T_s"> small enough, we guarantee that <img src="https://render.githubusercontent.com/render/math?math=\hat{\omega} < \pi">.
 
+Function [_DoubleFFT_1D.realForward()_](https://wendykierp.github.io/JTransforms/apidocs/org/jtransforms/fft/DoubleFFT_1D.html "JTransforms doc") is used in One.class.
+
+
+
 
 
 <img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
