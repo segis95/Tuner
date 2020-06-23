@@ -29,8 +29,10 @@ In the real life a sounding string does not produce a single frequency. It turns
 # Recognition algorithm.
 
 - Perform DFT and calculate **spectrogram**;
-- Calculate the **spectrogram average** <img src="https://render.githubusercontent.com/render/math?math=S_{avg}"> for frequencies from 20Hz to _max_freq__(48K Hz, 22K Hz, 8K Hz or 4K Hz - depends on the user's choice);
-- Calculate <img src="https://render.githubusercontent.com/render/math?math=BS_{avg}"> - the average of the above spectrogram points **where value is below** <img src="https://render.githubusercontent.com/render/math?math=S_{avg}">, so that <img src="https://render.githubusercontent.com/render/math?math=BS_{avg} < S_{avg}">; define threshold <img src="https://render.githubusercontent.com/render/math?math=T := 4 * BS_{avg}">
+- Calculate the **spectrogram average** <img src="https://render.githubusercontent.com/render/math?math=S_{avg}"> for frequencies from 20Hz to _max_freq_(48K Hz, 22K Hz, 8K Hz or 4K Hz - depends on the user's choice);
+- Calculate <img src="https://render.githubusercontent.com/render/math?math=BS_{avg}"> - the average of the above spectrogram points **where value is below** <img src="https://render.githubusercontent.com/render/math?math=S_{avg}">, so that <img src="https://render.githubusercontent.com/render/math?math=BS_{avg} < S_{avg}">; define threshold <img src="https://render.githubusercontent.com/render/math?math=T := 4 * BS_{avg}">;
+- For each frequency <img src="https://render.githubusercontent.com/render/math?math=f"> in the spectrum calculate it's weight <img src="https://render.githubusercontent.com/render/math?math=w_f">: the sum over spectrum values for <img src="https://render.githubusercontent.com/render/math?math=f, 2f, 3f, 4f \dots"> up to _max_freq_; it's important to note that we add up only values above <img src="https://render.githubusercontent.com/render/math?math=T">; we also account for the fact that note frequencies are rounded and the spectrum peaks are not perfect delta-functions, so for <img src="https://render.githubusercontent.com/render/math?math=w_f"> we add up spectrum value for <img src="https://render.githubusercontent.com/render/math?math=f"> and values for <img src="https://render.githubusercontent.com/render/math?math=f - 1"> and <img src="https://render.githubusercontent.com/render/math?math=f + 1"> weighted by 0.5;
+- Choose <img src="https://render.githubusercontent.com/render/math?math=f_{max}"> with maximal <img src="https://render.githubusercontent.com/render/math?math=w_f">;
 
 
 
