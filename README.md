@@ -23,7 +23,7 @@ Function [_DoubleFFT_1D.realForward()_](https://wendykierp.github.io/JTransforms
 In the real life a sounding string does not produce a single frequency. It turns out that a range of frequencies is produced. Those frequencies are usually represented by the main one and it's multiples([_Overtones_](https://en.wikipedia.org/wiki/Overtone#:~:text=An%20overtone%20is%20any%20frequency,overtones%20together%20are%20called%20partials. "Overtone")). To undertand why this happens it's useful to look at the
 [_solution to the Vibrating String differential equation_](https://tutorial.math.lamar.edu/classes/de/VibratingString.aspx "PDE Solution"). According to it, any string movement may be decomposed into an infinite sum of harmonics. Each harmonic describes a sinusoidal shape of the oscillating string i.e. oscillation amplitude of each point of the string. That's why there are several frequencies in the signal: the main one(corresponding to the vibrating part of the string) and **overtones**. 
 
-# Recognition algorithm.
+# Recognition algorithm
 
 - Perform DFT and calculate **spectrogram**;
 - Calculate the **spectrogram average** <img src="https://render.githubusercontent.com/render/math?math=S_{avg}"> for frequencies from 20Hz to _max_freq_(48K Hz, 22K Hz, 8K Hz or 4K Hz - depends on the user's choice);
